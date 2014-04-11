@@ -3,7 +3,7 @@
   <parent>
     <groupId>de.metalcon</groupId>
     <artifactId>pom</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -19,16 +19,11 @@
     </repository>
   </repositories>
 
-  <properties>
-    <metalcon.backendapi.version>0.1.1</metalcon.backendapi.version>
-    <metalcon.muid.version>0.3.2</metalcon.muid.version>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>de.metalcon</groupId>
-      <artifactId>api</artifactId>
-      <version>${metalcon.backendapi.version}</version>
+      <artifactId>backend-api</artifactId>
+      <version>${metalcon.backendApi.version}</version>
     </dependency>
     <dependency>
       <groupId>de.metalcon</groupId>
