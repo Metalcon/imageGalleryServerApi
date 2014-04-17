@@ -1,12 +1,16 @@
 package de.metalcon.imageGalleryServer.api;
 
+import java.io.Serializable;
+
 /**
  * image information object to create images and use images read before
  * 
  * @author sebschlicht
  * 
  */
-public class ImageInfo {
+public class ImageInfo implements Serializable {
+
+    private static final long serialVersionUID = 5459142068613276422L;
 
     protected long timestamp;
 
