@@ -12,8 +12,6 @@ public class CreateImageRequest extends GalleryServerRequest {
 
     private static final long serialVersionUID = -2005239094241010944L;
 
-    protected long entityId;
-
     protected ImageInfo imageInfo;
 
     protected byte[] rawImage;
@@ -23,36 +21,28 @@ public class CreateImageRequest extends GalleryServerRequest {
     protected Long galleryId;
 
     private CreateImageRequest(
-            long entityId,
             ImageInfo imageInfo,
             InputStream imageStream) {
-        this.entityId = entityId;
         this.imageInfo = imageInfo;
         rawImage = loadImageFromStream(imageStream);
     }
 
     public CreateImageRequest(
-            long entityId,
             ImageInfo imageInfo,
             InputStream imageStream,
             GalleryType galleryType) {
-        this(entityId, imageInfo, imageStream);
+        this(imageInfo, imageStream);
         this.galleryType = galleryType;
         galleryId = null;
     }
 
     public CreateImageRequest(
-            long entityId,
             ImageInfo imageInfo,
             InputStream imageStream,
             long galleryId) {
-        this(entityId, imageInfo, imageStream);
+        this(imageInfo, imageStream);
         galleryType = null;
         this.galleryId = galleryId;
-    }
-
-    public long getEntityId() {
-        return entityId;
     }
 
     public GalleryType getGalleryType() {
